@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="icon" href="/imagenes/png-clipart-incandescent-light-bulb-computer-icons-light-text-innovation.png">
+    
+
+  
+    <title>inicio</title>
+</head>
+<body>
+
+   <div id="portITCH"> 
+    <h1>Centro de Innovacion</h1>
+    <a> Bienvenido joven estudiante en esta plataforma podras dar un mejor seguimiento de tus proyectos de investigacion</a>
+    </div>
+    <div  id="mainInicio">
+            <div >
+                <h1 id="presentacion">Ingrese Sus Datos</h1>
+                <br>
+                <form action="principal.html" id="prueba">
+                    <div >
+                        <input class="entrada" required id="nombre" type="text" placeholder="Nombre">
+                    </div>
+                    <div >
+                        <input class="entrada" required id="correo" type="email" placeholder="Correo">
+                    </div>
+                    <button id="registro">Enviar</button>
+                </form>
+            </div>
+    </div>
+i
+    <div class="footer" >  
+    <a id="pie">contactanos en nuestras redes:</a>
+    <ul>
+       <a href="https://www.youtube.com/" ><img src="/imagenes/youtube.png"  id="icono"></a>
+
+       <a href="https://www.twitter.com" ><img src="/imagenes/gorjeo.png" id="icono" ></a>
+
+       <a href="https://www.facebook.com" ><img src="/imagenes/facebook.png" id="icono" ></a>
+
+       <a href="mailto:l17390837@chetumal.tecnm.mx" ><img src="/imagenes/outlook.png" id="icono" ></a>
+
+       <a href="http://www.itchetumal.edu.mx/" ><img src="/imagenes/TecChetumal-232x300_0.png" id="icono" ></a>
+
+
+        
+       
+    </ul>
+   </div>
+  
+</body>
+
+<script>
+    // Obtener referencias 
+    const $prueba = document.querySelector("#prueba"),
+        $nombre = document.querySelector("#nombre"),
+        $correo = document.querySelector("#correo");
+    $prueba.onsubmit = evento => {
+        evento.preventDefault();
+        const nombre = $nombre.value,
+            correo = $correo.value;
+        // Validar
+        
+
+        if (nombre === "panfilo" || nombre === "voldemor") {
+            alert("no digas el nombre de ya sabes quien jsjsj");
+            return;
+        }
+         if (!/^([a-zA-ZñÑáéíóúÁÉÍÓÚ])+$/i.test(nombre ) ) {
+         alert("el nombre solo puede contener letras");
+          return false; 
+         }
+        if (!correo.endsWith("@chetumal.tecnm.mx")) {
+            alert("tiene que ser un correo del itch");
+            return;
+        }
+        $prueba.submit();
+    };
+   
+  
+
+
+</script>
+
+</html>
